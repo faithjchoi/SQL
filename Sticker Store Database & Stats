@@ -1,0 +1,29 @@
+CREATE TABLE store (id integer primary key, name TEXT, quantity INTEGER, dollars INTEGER, aisle INTEGER, cuteness INTEGER);
+
+INSERT INTO store VALUES (1, "Stegasaurus Flower Sticker", 200, 3, 1, 5);
+INSERT INTO store VALUES (2, "Fries Before Guys Sticker", 195, 2, 2, 5);
+INSERT INTO store VALUES (3, "Triceratops Flower Sticker", 190, 3, 1, 5);
+INSERT INTO store VALUES (4, "Sea Otters Holding Hands Sticker", 200, 4, 4, 5);
+INSERT INTO store VALUES (5, "Radiate Positivity Sticker", 100, 2, 5, 5);
+INSERT INTO store VALUES (6, "Buzzing Bees Sticker", 3000, 1, 4, 5);
+INSERT INTO store VALUES (7, "Smiling Teabag Sticker", 250, 3, 4, 5);
+INSERT INTO store VALUES (8, "Hammerhead Shark Sticker", 200, 2, 4, 5);
+INSERT INTO store VALUES (9, "Kissing Skeletons Sticker", 100, 3, 6, 5);
+INSERT INTO store VALUES (10, "Plant Lover Sticker", 250, 4, 4, 5);
+INSERT INTO store VALUES (11, "Travel Sticker", 100, 3, 6, 5);
+INSERT INTO store VALUES (12, "Galactic Pizza Sticker", 200, 2, 6, 5);
+INSERT INTO store VALUES (13, "She Doesnt Even Go Here Sticker", 100, 3, 6, 5);
+INSERT INTO store VALUES (14, "Seal of Approval", 95, 3, 2, 5);
+INSERT INTO store VALUES (15, "Campfire Sloth", 6000, 2, 1, 5);
+
+--display the database ordered by Primary Key
+SELECT * FROM store;
+
+--display the database ordered by quantity descending
+SELECT * FROM store WHERE Quantity > 95 ORDER BY quantity DESC;
+
+--display the database ordered by dollar amount descending
+SELECT * FROM store WHERE dollars > 0 ORDER by dollars DESC;
+
+--display the database ordered in alphabetical order
+SELECT * FROM store ORDER BY Name 
