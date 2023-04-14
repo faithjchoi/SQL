@@ -1,0 +1,29 @@
+# In this project, I'm joining information from 2 tables that contain different information but are joined by ID
+
+CREATE TABLE Disney_Movies (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    movie TEXT,
+    director text);
+
+INSERT INTO Disney_Movies (movie, director) VALUES ("Lion King", "Rob Minkoff");
+INSERT INTO Disney_Movies (movie, director) VALUES ("Beauty & The Beast", "Gary Trousdale");
+INSERT INTO Disney_Movies (movie, director) VALUES ("Mulan", "Tony Bancroft");
+INSERT INTO Disney_Movies (movie, director) VALUES ("Inside Out", "Pete Docter");
+INSERT INTO Disney_Movies (movie, director) VALUES ("The Little Mermaid", "John Musker");
+INSERT INTO Disney_Movies (movie, director) VALUES ("Robin Hood", "Wolfgang Reitherman");
+
+CREATE TABLE Disney_Composers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    year integer,
+    composer text);
+    
+INSERT INTO Disney_Composers (year, composer) VALUES (1994, "Elton John");
+INSERT INTO Disney_Composers (year, composer) VALUES (1991, "Alan Menken");
+INSERT INTO Disney_Composers (year, composer) VALUES (1998, "Matthew Wilder");
+INSERT INTO Disney_Composers (year, composer) VALUES (2015, "Michael Giacchino");
+INSERT INTO Disney_Composers (year, composer) VALUES (1989, "Alan Menken");
+INSERT INTO Disney_Composers (year, composer) VALUES (1973, "George Bruns");
+
+select movie, year from disney_movies
+join disney_composers
+on disney_movies.id = disney_composers.id
