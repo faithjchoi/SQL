@@ -1,4 +1,4 @@
-# In this project, I'm joining information from 2 tables that contain different information but are joined by ID
+# In this SQL, I'm joining information from 2 tables that contain different information but are joined by ID
 
 CREATE TABLE Disney_Movies (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
