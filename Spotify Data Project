@@ -11,3 +11,27 @@ from bit_db.Spotifydata
 where popularity > 84
 group by popularity
 order by popularity desc
+
+What is the average danceability of each song?
+Ordered by most danceable to least danceable song
+
+select avg(danceability) as avg_danceability, artist_name, track_name
+from bit_db.Spotifydata
+group by danceability
+order by danceability desc
+
+What are the top 10 songs with the highest energy?
+
+select energy, artist_name, track_name, danceability
+from bit_db.Spotifydata
+group by energy
+order by energy desc
+limit 10
+
+Which song is the longest in duration?
+
+select artist_name, track_name, duration_ms
+from bit_db.Spotifydata
+group by duration_ms
+order by duration_ms desc
+limit 1
