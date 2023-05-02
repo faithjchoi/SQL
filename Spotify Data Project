@@ -1,6 +1,13 @@
 How many songs are sung by each artist?
 
-select artist_name, count(*) as number_artists
+select artist_name, count(*) as number_songs
 from bit_db.Spotifydata
 group by artist_name
 
+Who are the top 10 most popular artists?
+
+select artist_name, popularity
+from bit_db.Spotifydata
+where popularity > 84
+group by popularity
+order by popularity desc
